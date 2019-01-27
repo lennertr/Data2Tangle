@@ -1,5 +1,5 @@
 {
-  "name": "csv2tangle",
+  "name": "data2tangle",
   "version": "0.0.0",
   "main": "main.js",
   "scripts": {
