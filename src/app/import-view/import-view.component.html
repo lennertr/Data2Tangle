@@ -1,0 +1,18 @@
+<div class="body-container full-height" fxLayout="column">
+  <div *ngIf="!!data" class="table-container">
+    <table mat-table [dataSource]="data">
+      <ng-container [matColumnDef]="column" *ngFor="let column of columnsToDisplay">
+        <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+        <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+    </table>
+  </div>
+  <br>
+  <div fxLayoutAlign="center top">
+    <button fxFlex="15"fxLayoutAlign="center center" mat-button (click)="backClicked()">Back</button>
+    <button fxFlex="15"fxLayoutAlign="center center" mat-button (click)="nextClicked()">Next</button>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="body-container" fxLayout="column">
+  <div fxLayout="row">
+    <mat-form-field fxFlex="30">
+      <input matInput [(ngModel)]="importOptions.delimiter" placeholder="Delimiter (Leave Empty for Auto-Detect)">
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field fxFlex="30">
+      <input matInput [(ngModel)]="importOptions.newline" placeholder="New Line">
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field fxFlex="30">
+      <input matInput [(ngModel)]="importOptions.quoteChar" placeholder="Quote Character">
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field fxFlex="30">
+      <input matInput [(ngModel)]="importOptions.escapeChar" placeholder="Escape Character">
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field fxFlex="30">
+      <input matInput [(ngModel)]="importOptions.encoding" placeholder="Encoding">
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-checkbox fxFlex="15" fxLayoutAlign="left center" [(ngModel)]="importOptions.header">
+      Header
+    </mat-checkbox>
+    <mat-checkbox fxFlex="15" fxLayoutAlign="left center" [(ngModel)]="importOptions.dynamicTyping">
+      Dynamic Types
+    </mat-checkbox>
+  </div>
+  <br>
+  <div fxLayout="row">
+    <mat-checkbox fxFlex="15" fxLayoutAlign="left center" [(ngModel)]="importOptions.skipEmptyLines">
+      Skip Empty Lines
+    </mat-checkbox>
+  </div>
+  <br>
+  <div fxLayout="row">
+    <button fxFlex="30" fxLayoutAlign="center center" mat-button (click)="importClicked()">Import</button>
+  </div>
+  <div fxLayout="row">
+    <button fxFlex="30" fxLayoutAlign="center center" mat-button (click)="dummyDataClicked()">Dummydata</button>
+  </div>
+</div>

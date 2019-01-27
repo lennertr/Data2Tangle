@@ -1,0 +1,18 @@
+<div class="body-container" fxLayout="column">
+  <div fxLayout="row" class="panel-container" *ngFor="let logEntry of log">
+    <mat-expansion-panel fxFlex="75">
+      <mat-expansion-panel-header>
+        <mat-panel-title>{{ formatDate(logEntry.date) }}</mat-panel-title>
+        <mat-panel-description>{{ logEntry.name }}</mat-panel-description>
+      </mat-expansion-panel-header>
+
+        <p><b>Tail Transaction Hash:</b></p>
+        <button mat-stroked-button (click)="copy(logEntry.tailTransactionHash)">{{ logEntry.tailTransactionHash }}</button>
+
+      <mat-action-row>
+        <button mat-button (click)="viewClicked(logEntry.tailTransactionHash)">View</button>
+        <button mat-button (click)="exportClicked(logEntry.tailTransactionHash)">Export</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </div>
+</div>

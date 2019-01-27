@@ -1,0 +1,18 @@
+<div class="body-container" fxLayout="column">
+  <div fxLayout="row">
+    <mat-form-field fxFlex="30">
+      <input matInput [(ngModel)]="nodeAddress" placeholder="Node Address">
+    </mat-form-field>
+    <div fxFlex="10" fxLayoutAlign="center center">
+      <button mat-button (click)="testClicked()">Test Node</button>
+    </div>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field fxFlex="30">
+      <input matInput [(ngModel)]="tailTransactionHash" placeholder="Tail Transaction Hash">
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <button fxFlex="30" fxLayoutAlign="center center" mat-button (click)="exportClicked()">Export</button>
+  </div>
+</div>

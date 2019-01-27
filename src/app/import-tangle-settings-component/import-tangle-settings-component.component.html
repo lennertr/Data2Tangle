@@ -1,0 +1,30 @@
+<div class="body-container" fxLayout="column">
+  <div fxLayout="row">
+    <mat-form-field fxFlex="30">
+      <input matInput [(ngModel)]="tangleSettings.nodeAddress" placeholder="Node Address">
+    </mat-form-field>
+    <div fxLayoutAlign="center center">
+      <button mat-button (click)="testClicked()">Test Node</button>
+    </div>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field fxFlex="30">
+      <input matInput [(ngModel)]="tangleSettings.seed" placeholder="Seed">
+    </mat-form-field>
+    <div fxLayoutAlign="center center">
+      <button mat-button (click)="generateSeedClicked()">Generate Seed</button>
+    </div>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field fxFlex="30">
+      <input matInput [(ngModel)]="tangleSettings.receiverAddress" placeholder="Receiver Address">
+    </mat-form-field>
+    <div fxLayoutAlign="center center">
+      <button mat-button (click)="generateAddressClicked()">Generate Address</button>
+    </div>
+  </div>
+  <div fxLayout="row">
+    <button fxFlex="15" fxLayoutAlign="center center" mat-button (click)="backClicked()">Back</button>
+    <button fxFlex="15" fxLayoutAlign="center center" mat-button (click)="sendClicked()">Send Transaction</button>
+  </div>
+</div>
