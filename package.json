@@ -31,7 +31,7 @@
     "@iota/extract-json": "^1.0.0-beta.8",
     "core-js": "^2.6.2",
     "hammerjs": "^2.0.8",
-    "ngx-clipboard": "^11.1.9",
+    "ngx-clipboard": "^12.2.1",
     "ngx-electron": "^2.1.1",
     "ngx-papaparse": "^3.0.2",
     "rxjs": "^6.0.0",
